@@ -1,0 +1,20 @@
+milvus:
+  host: 10.21.41.59
+  port: 19530
+  timeout: 30
+  collection:
+    name: my_collection
+    dim: 1024
+    metric_type: L2
+    index_type: IVF_FLAT
+    index_params:
+      nlist: 1024
+    search_params:
+      nprobe: 16
+
+embedding:
+  provider: qwen
+  apiKey: sk-da21dfc466f1477c9b18a80273d7e553
+  model: text-embedding-v3
+  endpoint: https://dashscope.aliyuncs.com/compatible-mode/v1
+  timeoutMs: 5000
